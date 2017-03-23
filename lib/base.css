@@ -1,0 +1,78 @@
+body.fullscreen {
+    overflow: hidden;
+}
+
+.inner-controls {
+    margin-bottom: 12px;
+}
+
+#livephp_input {
+    font-family: 'Courier New', monospace;
+    width: 95%;
+    overflow: scroll;
+}
+
+#livephp_output_wrapper {
+    position: fixed;
+    padding: 1em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ececf0;
+    box-shadow: -2px -2px 8px rgba(0,0,0,0.25);
+    box-sizing: border-box;
+}
+
+#livephp_output_wrapper.fullscreen {
+    top: 0;
+    background-color: rgba(236,236,240,0.92);
+}
+
+#livephp_output_wrapper > .controls {
+    float: right;
+}
+
+#livephp_output_wrapper > .controls > i {
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+#livephp_output {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 250px;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+#livephp_output.expanded {
+    max-height: 550px;
+}
+
+#livephp_output_wrapper.fullscreen #livephp_output {
+    max-height: none;
+    height: 100%;
+    padding-top: 3em;
+}
+
+#livephp_output_wrapper.fullscreen > h4 {
+    position: absolute;
+    left: 1.5em;
+    top: 0.75em;
+    z-index: 999;
+    color: #777777;
+    text-shadow: 1px 1px 0px #ffffff;
+}
+
+#livephp_output_wrapper.fullscreen > .controls {
+    position: absolute;
+    right: 2.5em;
+    top: 1.5em;
+    z-index: 999;
+}
+
+#livephp_output_wrapper.fullscreen > .controls > #toggle_output_view {
+    display: none;
+}

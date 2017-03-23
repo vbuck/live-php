@@ -5,5 +5,6 @@
  */
 
 $config = array(
-    'display_errors' => '1',
+    'display_errors'    => '1',
+    'default_snippet'   => '',
 );

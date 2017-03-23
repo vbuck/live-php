@@ -1,0 +1,25 @@
+require 'app/bootstrap.php';
+
+$bootstrap  = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
+$app        = $bootstrap->createApplication('CustomApp');
+
+$bootstrap->run($app);
+
+class CustomApp
+    extends \Magento\Framework\App\Http
+        implements \Magento\Framework\AppInterface
+{
+
+    public function launch()
+    {
+        // $instance = $this->_objectManager->create('\Target\Class\Name');
+
+        return $this->_response;
+    }
+
+    public function catchException(\Magento\Framework\App\Bootstrap $bootstrap, \Exception $exception)
+    {
+        echo $exception->getMessage();
+    }
+
+}

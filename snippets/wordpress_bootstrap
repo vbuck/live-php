@@ -1,0 +1,9 @@
+$_SERVER['PHP_SELF']    = '/wp-admin';
+$_SERVER['SERVER_NAME'] = empty($_SERVER['HOSTNAME']) ? 'localhost' : $_SERVER['HOSTNAME'];
+
+define('WP_ADMIN', true);
+
+require_once 'wp-load.php';
+require_once ABSPATH . 'wp-admin/includes/admin.php';
+
+echo sprintf('Site "%s" loaded.', get_option('siteurl'));

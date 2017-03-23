@@ -1,0 +1,4 @@
+require_once 'app/Mage.php';
+Mage::app()->setCurrentStore(0);
+
+echo sprintf('Store "%s" loaded.', Mage::app()->getStore()->getName());
