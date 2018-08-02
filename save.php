@@ -8,7 +8,7 @@ $snippet_path = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'snippets' . DIRECTORY
 
 $data = $_POST['livephp'];
 
-$fp = fopen($snippet_path . $data['snippet_name'] . '.php', 'w') OR die('Failed to save: write error.');
+$fp = fopen($snippet_path . $data['snippet_name'], 'w') OR die('Failed to save: write error.');
 
 flock($fp, LOCK_EX);
 fputs($fp, $data['input']);
