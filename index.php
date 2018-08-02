@@ -1,4 +1,4 @@
-<?php define('BASE_URI', dirname($_SERVER['SCRIPT_NAME'])); ?>
+<?php define('BASE_URI', rtrim(dirname($_SERVER['SCRIPT_NAME']), DIRECTORY_SEPARATOR)); ?>
 <?php require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html>
