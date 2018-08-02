@@ -1,10 +1,5 @@
 require 'app/bootstrap.php';
 
-$bootstrap  = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
-$app        = $bootstrap->createApplication('CustomApp');
-
-$bootstrap->run($app);
-
 class CustomApp
     extends \Magento\Framework\App\Http
         implements \Magento\Framework\AppInterface
@@ -23,3 +18,8 @@ class CustomApp
     }
 
 }
+
+$bootstrap  = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
+$app        = $bootstrap->createApplication('CustomApp');
+
+$bootstrap->run($app);
